@@ -41,6 +41,11 @@ p, li, a{
     font-family: 'Raleway', sans-serif,'Times New Roman', Times, serif;
     font-weight:bold;
 }
+
+section h2{
+    font-size: 1.9em;
+}
+
 .content-wrap{
     max-width: 950px;
     margin: 0 auto;
@@ -50,6 +55,7 @@ p, li, a{
 
 .profile-img{
     width: 300px;
+    padding-top: 30px;
     /* float: left; */
     /* margin-right: 3px; */
     border-radius: 50%;
@@ -83,6 +89,31 @@ p, li, a{
     min-height: 225px;
 }
 
+/* Navigation bar(the one on top of page) 
+------------------------------------*/
+
+nav{
+    background: #4747ff;
+}
+
+.navbar{
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* makes the display for the navbar and how it looks */
+.navbar a{
+    display: inline-block;
+    color: #a3a3ff;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-decoration: none;
+    width: 18%;
+}
+
 
 /* Header 
 ------------------------------------*/
@@ -91,6 +122,7 @@ header{
 }
 
 header h1{
+    padding-top: 30px;
     font-size: 2.5em;
     margin-bottom: 5px;
     font-weight: bold;
@@ -111,8 +143,19 @@ header h2{
 
 /* Education
 ------------------------------------*/
+
 .styleEducation{
-    background: #ffeaac;
+    /* background: #ffeaac; */
+    line-height: 1.5;
+    text-shadow:1px 1px 2px white
+}
+
+
+.img-bg{
+    /* followed the setup from week 7 slides, changed the color to fit the color theme I am using */
+    background: linear-gradient(rgba(127, 229, 255, 0.5), rgba(243, 255, 167, 0.5)), url(../images/csun.png) no-repeat center;
+    width: 100%;
+    height: 100%;
 }
 
 /* Footer
@@ -126,5 +169,6 @@ header h2{
 .contact-info a{
     padding: 10px;
     display: inline-block;
+    text-decoration: none;
 
 }
