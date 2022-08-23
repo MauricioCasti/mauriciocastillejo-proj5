@@ -46,47 +46,92 @@ section h2{
     font-size: 1.9em;
 }
 
-.content-wrap{
-    max-width: 950px;
-    margin: 0 auto;
-    padding: 50px;
-    overflow: hidden;
-}
-
+/* using flex */
 .profile-img{
-    width: 300px;
-    padding-top: 30px;
+    align-items: flex-end;
+    width: 400px;
+    padding-top: 40px;
+    margin-left: 140px;
     /* float: left; */
     /* margin-right: 3px; */
     border-radius: 50%;
 }
 
+
+/* using flex */
 /* for some reason the alignment would not work unless the percentages were a 40:60 ratio, so i decided to  create a separate column narrow for only the header*/
 .column-narrow-header{
-    width: 40%;
-    float: left;
-    padding-right: 3%;
+    /* width: 170%; */
+    align-items:flex-start;
+    margin-right: 40px;
+    width: 190vw;
+    padding-right: 20px;
     min-height: 175px;
 }
 
 /* for some reason the alignment would not work unless the percentages were a 60:40 ratio, so i decided to  create a separate column wide for only the header*/
 .column-wide-header{
-    width: 60%;
+    /* no longer needed due to flex */
+    /* width: 60%;  */
     float: left;
     min-height: 225px;
 }
 
+.content-wrap-flex{
+    display: flex;
+    /* max-width: 950px; */
+    /* margin: 0 auto;  */
+    padding: 50px;
+    overflow: hidden;
+}
+
+/* using flex */
+.content-wrap{
+    display: flex;
+    flex-direction: row;
+    max-width: 80%;
+    margin: 0 auto; 
+    padding: 50px;
+    overflow: hidden;
+}
+
+/* aligned with the flex of content-wrap */
 .column-narrow{
-    width: 30%;
-    float: left;
+    /* flex: 100%; */
+    /* align-content: flex-end; */
+    flex: 30%;
+    /* float: left; */
     padding-right: 3%;
     min-height: 175px;
 }
 
+/* aligned with the flex of content-wrap */
 .column-wide{
-    width: 70%;
-    float: left;
+    /* justify-content: right;
+    align-items: flex-end; */
+    flex: 70%;
+    /* flex:10%; */
+    /* float: right; */
     min-height: 225px;
+}
+
+/* margin ids below help align with narrow section from its flex alignment   */
+#margin1{
+    margin-bottom: 40px;
+}
+
+#margin2{
+    margin-bottom: 85px;
+
+}#margin3{
+    margin-bottom: 60px;
+}
+#desc{
+    margin-top: 40px;
+}
+
+#work-header{
+    padding: 30px;
 }
 
 /* Navigation bar(the one on top of page) 
@@ -131,7 +176,6 @@ header h1{
 header h2{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight:600;
-    margin: 0;
 }
 
 /* Work Experience
